@@ -92,15 +92,21 @@ h1, h2, h3, p {
   }
 
   .organization {
-    width: $width-desktop/3;
-
     @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
       text-align: center;
     }
 
+    @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+      width: $width-desktop/4;
+      text-align: left;
+      padding-left: 10px;
+    }
+
     @media screen and (min-width: $break-tablet) {
+      width: $width-desktop/3;
       text-align: center;
     }
+
 
     h1 {
       font-weight: normal;
@@ -141,10 +147,17 @@ h1, h2, h3, p {
   .mission {
     font-weight: normal;
     font-style: italic;
-    width: $width-desktop/2;
 
     @media screen and (max-width: $break-mobile) {
       display: none;
+    }
+
+    @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+      width: $width-desktop/3;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      width: $width-desktop/2;
     }
   }
 }
@@ -270,7 +283,7 @@ h1, h2, h3, p {
   .hero .message {
     height: 179px;
     color: $pink;
-    background: url(/images/homepage-hero.png);
+    background: url(/images/homepage-hero.png) center;
 
     h1 {
       padding-top: 15px;
@@ -302,7 +315,7 @@ h1, h2, h3, p {
 
   .videos {
     position: relative;
-    background: #430922 url(/images/homepage-background.jpg) no-repeat;
+    background: #430922 url(/images/homepage-background.jpg) no-repeat top center;
 
     @media screen and (max-width: $break-mobile) {
       height: 640px;
