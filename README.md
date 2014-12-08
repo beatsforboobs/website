@@ -15,7 +15,7 @@ The staging site will deploy automatically.  Generally, the updated staging site
 
 The production site needs to be manually deploy via the [Deployment Pipeline](https://snap-ci.com/beatsforboobs/website/branch/master).  Press the play button on the most recent deployment.
 
-* [Deployment to Production](https://snap-ci.com/beatsforboobs/website/branch/master)
+* [Deployment Pipeline](https://snap-ci.com/beatsforboobs/website/branch/master) - Use this to deploy the live website, http://beatsforboobs.org
 
 ## Editing the website online
 
