@@ -7,14 +7,14 @@ This website is created using [Hugo](http://gohugo.io), the static website engin
 
 In most cases, you should be able to edit the website online via the github.com site.  The following are links to the most commonly editing pages.  Once you are done editing a page, a job will automatically be triggered that will deploy the website to the staging site.
 
-* [Home Page]()
-* [About]()
+* [Home Page](https://github.com/beatsforboobs/website/blob/master/layouts/index.html)
+* [About](https://github.com/beatsforboobs/website/blob/master/content/content/about-us.md)
 * Tribute Wall
-	* [In Honor Of]()
-	* [In Memory Of]()
-* [Contact]()
-* [Make a Donation]()
-* [Beneficiaries]()
+	* [In Honor Of](https://github.com/beatsforboobs/website/blob/master/data/in-honor-of.txt)
+	* [In Memory Of](https://github.com/beatsforboobs/website/blob/master/data/in-memory-of.txt)
+* [Contact](https://github.com/beatsforboobs/website/blob/master/content/contact.md)
+* [Make a Donation](https://github.com/beatsforboobs/website/blob/master/content/content/make-donation.md)
+* [Beneficiaries](https://github.com/beatsforboobs/website/blob/master/content/content/2014-san-francisco-beneficiaries.md)
 
 ## Editing the website locally
 
