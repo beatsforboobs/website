@@ -3,6 +3,11 @@ Beats for Boobs website
 
 This website is created using [Hugo](http://gohugo.io), the static website engine.
 
+## Links
+
+* [Staging Website](http://beatsforboobs-staging.s3-website-us-east-1.amazonaws.com/)
+* [Production Website](http://beatsforboobs.org)
+
 ## Editing the website online
 
 In most cases, you should be able to edit the website online via the github.com site.  The following are links to the most commonly editing pages.  Once you are done editing a page, a job will automatically be triggered that will deploy the website to the staging site.
