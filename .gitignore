@@ -4,6 +4,8 @@
 /*.iws
 /.idea
 /.sass-cache
+/*.env
 
 # ignore generated files
 /public
+

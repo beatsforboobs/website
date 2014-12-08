@@ -349,6 +349,34 @@ h1, h2, h3, p {
         padding: 5px 0;
         width: 220px;
         font-size: 20px; } }
+  @media screen and (max-width: 600px) {
+    .content .tribute-wall.desktop {
+      display: none; } }
+  @media screen and (min-width: 600px) {
+    .content .tribute-wall.mobile {
+      display: none; } }
+  .content .tribute-wall ul {
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    float: left;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0; }
+    @media screen and (max-width: 600px) {
+      .content .tribute-wall ul {
+        width: 46%;
+        font-size: 14px;
+        padding: 0 5px;
+        margin: 0 2% 0 0; } }
+    @media screen and (min-width: 600px) {
+      .content .tribute-wall ul {
+        width: 24%;
+        padding: 0 5px;
+        margin: 0 8px 0 0; } }
+  .content .tribute-wall li {
+    box-sizing: border-box;
+    padding: 1px 8px;
+    list-style: none; }
 
 .beneficiary {
   float: left;

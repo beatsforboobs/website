@@ -471,6 +471,48 @@ h1, h2, h3, p {
       font-size: 20px;
     }
   }
+
+  .tribute-wall {
+    @media screen and (max-width: $break-mobile) {
+      &.desktop {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: $break-mobile) {
+      &.mobile {
+        display: none;
+      }
+    }
+
+    ul {
+      background-color: $grey-light;
+      box-sizing: border-box;
+      float: left;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-padding-start: 0;
+
+      @media screen and (max-width: $break-mobile) {
+        width: 46%;
+        font-size: 14px;
+        padding: 0 5px;
+        margin: 0 2% 0 0;
+      }
+
+      @media screen and (min-width: $break-mobile) {
+        width: 24%;
+        padding: 0 5px;
+        margin: 0 8px 0 0;
+      }
+    }
+
+    li {
+      box-sizing: border-box;
+      padding: 1px 8px;
+      list-style: none;
+    }
+  }
 }
 
 //--------------------------------------------------------------------------------
