@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+  <title>{{ .Site.Title }}</title>
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    function playVideo(src) {
+      removeVideo();
+      $("#video-container").addClass("active");
+
+      var element = document.createElement("iframe");
+      element.setAttribute("src", src);
+      element.setAttribute("frameborder", "0");
+      element.setAttribute("height", "100%");
+      element.setAttribute("width", "100%");
+
+      $("#video-container").append(element);
+    }
+
+    function removeVideo() {
+      $("#video-container").empty();
+    }
+
+    function closeVideoModal() {
+      removeVideo();
+      $("#video-container").removeClass("active");
+    }
+
+    $(document).on("keyup", function (e) {
+      if (e.which == 27) {
+        closeVideoModal();
+      }
+    });
+
+    $(document).ready(function () {
+      $('.video').on('click', function (element) {
+        var src = $(element.target).data('src');
+        playVideo(src);
+      })
+    });
+
+  </script>
+  {{ partial "head.html" . }}
+</head>
+<body lang="en">
+{{ partial "header.html" . }}
+
+<div class="homepage">
+  <p class="message">
+    Beats for Boobs 10 Year Anniversary granted $40,000 back to our community!
+  </p>
+
+  <div class="hero">
+    <div class="message">
+      <h1>Beats for Boobs San Francisco Turns it Up to 11</h1>
+
+      <h2>Save the Date!</h2>
+
+      <p class="date">Saturday, January 24, 2015</p>
+    </div>
+    <div class="videos">
+      <a class="video video-anniversary"
+         data-src="//www.youtube.com/embed/aMhdrsUM5V0?autoplay=1" href="#">10th Anniversary B4B Celebration</a>
+      <a class="video video-seattle" data-src="//www.youtube.com/embed/ebKhRDPdje8?autoplay=1" href="#">Beats for Boobs
+        Seattle 2011</a>
+      <a class="video video-los-angeles" data-src="//www.youtube.com/embed/o1wdAxPXjT8?autoplay=1" href="#">Beats for
+        Boobs Los Angeles 2011</a>
+      <a class="video video-fashion-show" data-src="//www.youtube.com/embed/60LZg5zImBQ?autoplay=1" href="#">Beats for
+        Boobs Fashion Show 2010</a>
+    </div>
+  </div>
+</div>
+
+<div id="video-container"> </div>
+
+{{ partial "footer.html" }}
+</body>

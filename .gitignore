@@ -1,0 +1,9 @@
+# ignore intellij files
+/*.iml
+/*.ipr
+/*.iws
+/.idea
+/.sass-cache
+
+# ignore generated files
+/public

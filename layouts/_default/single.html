@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+  <title>{{ .Site.Title }} | Beats for Boobs</title>
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}"/>
+  {{ partial "head.html" . }}
+</head>
+<body lang="en">
+{{ partial "header.html" . }}
+
+<div class="content">
+  {{ .Content }}
+</div>
+
+{{ partial "footer.html" }}
+</body>

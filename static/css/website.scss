@@ -1,0 +1,375 @@
+$pink: #f7287a;
+$pink-dark: #c00172;
+$pink-link: #bd37ba;
+$grey: #6f767d;
+$grey-light: #f9f9f9;
+
+$break-mobile: 300px;
+$break-table: 960px;
+
+$width-mobile: 960px;
+$width-tablet: 720px;
+$width-desktop: 960px;
+
+$width-menu: 100px;
+$overhang: 25px;
+
+//--------------------------------------------------------------------------------
+
+@mixin content {
+  width: $width-desktop;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+//--------------------------------------------------------------------------------
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+//--------------------------------------------------------------------------------
+
+.header {
+  margin-top: 10px;
+  @include content;
+}
+
+.organization, .mission, .social {
+  float: left;
+  color: white;
+}
+
+.organization {
+  width: $width-desktop/3;
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: $pink;
+    font-size: 9px;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .registered {
+    position: relative;
+    top: -6px;
+    font-size: 9px;
+  }
+}
+
+.mission {
+  font-weight: normal;
+  font-style: italic;
+  width: $width-desktop/2;
+}
+
+//--------------------------------------------------------------------------------
+
+.navigation {
+  @include content;
+  position: relative;
+
+  ul {
+    position: relative;
+    list-style: none;
+    width: $width-desktop + 2 * $overhang;
+    left: -$overhang;
+    overflow-x: visible;
+    background-color: black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    margin-top: 12px;
+    margin-bottom: 0;
+    -webkit-margin-before: 12px;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+  }
+
+  li:first-of-type {
+    padding-left: 200px;
+  }
+
+  a {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    margin: 0 2px;
+    padding: 8px 15px;
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+//--------------------------------------------------------------------------------
+
+#video-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+#video-container.active {
+  display: block;
+  z-index: 100;
+}
+
+//--------------------------------------------------------------------------------
+
+.homepage {
+  @include content;
+  background-color: white;
+  padding: 24px;
+  box-sizing: border-box;
+
+  .message, .hero {
+    text-align: center;
+  }
+
+  .message {
+    font-weight: bold;
+  }
+
+  .hero {
+    margin-top: 16px;
+    box-sizing: border-box;
+    border: 2px solid black;
+  }
+
+  .hero .message {
+    height: 179px;
+    color: $pink;
+    background: url(/images/homepage-hero.png);
+
+    h1 {
+      padding-top: 15px;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 60px;
+    }
+
+    .date {
+      font-size: 40px;
+    }
+  }
+
+  .videos {
+    height: 425px;
+    position: relative;
+    background: #430922 url(/images/homepage-background.jpg) no-repeat;
+  }
+
+  .video {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 3px;
+    position: relative;
+    top: 220px;
+    overflow: hidden;
+    width: 210px;
+    height: 160px;
+    display: block;
+    float: left;
+    background-color: black;
+    margin: 0 8px;
+  }
+
+  .video:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .video-anniversary {
+    background: black url(/images/homepage-anniversary.png) no-repeat;
+  }
+
+  .video-seattle {
+    background: black url(/images/homepage-seattle.png) no-repeat;
+  }
+
+  .video-los-angeles {
+    background: black url(/images/homepage-los-angeles.png) no-repeat;
+  }
+
+  .video-fashion-show {
+    background: black url(/images/homepage-fashion-show.png) no-repeat;
+  }
+}
+
+//--------------------------------------------------------------------------------
+
+.content {
+  @include content;
+
+  background-color: white;
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 15px;
+
+  h1, h2, h3 {
+    font-weight: normal;
+    font-family: Georgia, Palatino, Times, serif;
+  }
+
+  h1 {
+    color: $pink-dark;
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  h2 {
+    margin-top: 18px;
+    font-size: 24px;
+    line-height: 30px;
+    color: $grey;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: $grey;
+    margin-bottom: 25px;
+  }
+
+  thead {
+    visibility: hidden;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  td:first-of-type {
+    border-top: 1px solid $grey-light;
+  }
+
+  td {
+    padding: 1px 0;
+    border-bottom: 1px solid $grey-light;
+    font-family: Georgia, 'New Century Schoolbook', 'Nimbus Roman No9 L', serif;
+    font-size: 13px;
+    line-height: 21px;
+    color: $grey;
+  }
+
+  hr {
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+
+  li {
+    color: $grey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .button.donation {
+    background-color: $pink-dark;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 4px;
+    width: 220px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//--------------------------------------------------------------------------------
+
+.beneficiary {
+  float: left;
+  height: 150px;
+  width: 96px;
+  margin-right: 15px;
+}
+
+.beneficiary-bcef {
+  background: url(/images/beneficiary/bceflogo.png) no-repeat;
+}
+
+.beneficiary-breastcancerfund {
+  background: url(/images/beneficiary/breast-cancer-fund.png) no-repeat;
+}
+
+.beneficiary-shanti {
+  background: url(/images/beneficiary/Margot_Murphy_BCP_logo.png) no-repeat;
+}
+
+.beneficiary-wcrc {
+  background: url(/images/beneficiary/wcrclogoOver.gif) no-repeat;
+}
+
+//--------------------------------------------------------------------------------
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #8b0048;
+}
+
+body, td, th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+a {
+  color: $pink-link;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
