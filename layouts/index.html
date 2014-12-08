@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html>
 <head>
+  {{ partial "head.html" . }}
   <title>{{ .Site.Title }}</title>
   <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}"/>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script>
+    function isMobile() {
+      try {
+        document.createEvent("TouchEvent");
+        return true;
+      }
+      catch (e) {
+        return false;
+      }
+    }
+
     function playVideo(src) {
       removeVideo();
       $("#video-container").addClass("active");
@@ -34,14 +43,24 @@
     });
 
     $(document).ready(function () {
-      $('.video').on('click', function (element) {
-        var src = $(element.target).data('src');
-        playVideo(src);
-      })
+      if (isMobile()) {
+        $('.video').each(function (index, element) {
+          var href = $(element).data('mobile');
+          $(element).attr("href", href);
+//          $(element).attr("target", "_top");
+        });
+
+      } else {
+        // video player
+        $('.video').on('click', function (element) {
+          var src = $(element.target).data('src');
+          playVideo(src);
+          return false;
+        });
+      }
     });
 
   </script>
-  {{ partial "head.html" . }}
 </head>
 <body lang="en">
 {{ partial "header.html" . }}
@@ -60,19 +79,23 @@
       <p class="date">Saturday, January 24, 2015</p>
     </div>
     <div class="videos">
-      <a class="video video-anniversary"
-         data-src="//www.youtube.com/embed/aMhdrsUM5V0?autoplay=1" href="#">10th Anniversary B4B Celebration</a>
-      <a class="video video-seattle" data-src="//www.youtube.com/embed/ebKhRDPdje8?autoplay=1" href="#">Beats for Boobs
-        Seattle 2011</a>
-      <a class="video video-los-angeles" data-src="//www.youtube.com/embed/o1wdAxPXjT8?autoplay=1" href="#">Beats for
-        Boobs Los Angeles 2011</a>
-      <a class="video video-fashion-show" data-src="//www.youtube.com/embed/60LZg5zImBQ?autoplay=1" href="#">Beats for
-        Boobs Fashion Show 2010</a>
+      <a data-mobile="https://www.youtube.com/embed/aMhdrsUM5V0?autoplay=1&fs=1&rel=0"
+         data-src="//www.youtube.com/embed/aMhdrsUM5V0?autoplay=1"
+         target="_top" class="video video-anniversary" href="#">10th Anniversary B4B Celebration</a>
+      <a data-mobile="https://www.youtube.com/embed/ebKhRDPdje8?autoplay=1&fs=1&rel=0"
+         data-src="//www.youtube.com/embed/ebKhRDPdje8?autoplay=1"
+         target="_top" class="video video-seattle" href="#">Beats for Boobs Seattle 2011</a>
+      <a data-mobile="https://www.youtube.com/embed/o1wdAxPXjT8?autoplay=1&fs=1&rel=0"
+         data-src="//www.youtube.com/embed/o1wdAxPXjT8?autoplay=1"
+         target="_top" class="video video-los-angeles" href="#">Beats for Boobs Los Angeles 2011</a>
+      <a data-mobile="https://www.youtube.com/embed/60LZg5zImBQ?autoplay=1&fs=1&rel=0"
+         data-src="//www.youtube.com/embed/60LZg5zImBQ?autoplay=1"
+         target="_top" class="video video-fashion-show" href="#">Beats for Boobs Fashion Show 2010</a>
     </div>
   </div>
 </div>
 
-<div id="video-container"> </div>
+<div id="video-container"></div>
 
 {{ partial "footer.html" . }}
 </body>

@@ -4,8 +4,8 @@ $pink-link: #bd37ba;
 $grey: #6f767d;
 $grey-light: #f9f9f9;
 
-$break-mobile: 300px;
-$break-table: 960px;
+$break-mobile: 600px;
+$break-tablet: 960px;
 
 $width-mobile: 960px;
 $width-tablet: 720px;
@@ -17,9 +17,19 @@ $overhang: 25px;
 //--------------------------------------------------------------------------------
 
 @mixin content {
-  width: $width-desktop;
-  margin-left: auto;
-  margin-right: auto;
+  @media screen and (max-width: $break-mobile) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $break-tablet) {
+    width: $width-desktop;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 h1, h2, h3, p {
@@ -50,80 +60,167 @@ h1, h2, h3, p {
 .header {
   margin-top: 10px;
   @include content;
-}
 
-.organization, .mission, .social {
-  float: left;
-  color: white;
-}
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
 
-.organization {
-  width: $width-desktop/3;
-  text-align: center;
-
-  h1 {
-    font-size: 24px;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
+  .hamburger, .organization, .mission, .social {
+    float: left;
+    color: white;
   }
 
-  p {
-    color: $pink;
-    font-size: 9px;
-    font-style: italic;
-    margin: 0;
-  }
-
-  .registered {
+  .hamburger {
     position: relative;
-    top: -6px;
-    font-size: 9px;
-  }
-}
+    margin: 5px 8px 3px 3px;
+    top: -2px;
+    float: left;
+    background: url(/images/hamburger.png) no-repeat;
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
 
-.mission {
-  font-weight: normal;
-  font-style: italic;
-  width: $width-desktop/2;
+    @media screen and (min-width: $break-mobile) {
+      display: none;
+    }
+  }
+
+  .social {
+    @media screen and (max-width: $break-mobile) {
+      display: none;
+    }
+  }
+
+  .organization {
+    width: $width-desktop/3;
+
+    @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: normal;
+      margin: 0;
+      padding: 0;
+
+      @media screen and (max-width: $break-mobile) {
+        font-size: 30px;
+      }
+
+      @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+        font-size: 24px;
+      }
+
+      @media screen and (min-width: $break-tablet) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      color: $pink;
+      font-size: 9px;
+      font-style: italic;
+      margin: 0;
+
+      @media screen and (max-width: $break-mobile) {
+        display: none;
+      }
+    }
+
+    .registered {
+      position: relative;
+      top: -.8em;
+      font-size: .5em;
+    }
+  }
+
+  .mission {
+    font-weight: normal;
+    font-style: italic;
+    width: $width-desktop/2;
+
+    @media screen and (max-width: $break-mobile) {
+      display: none;
+    }
+  }
 }
 
 //--------------------------------------------------------------------------------
 
 .navigation {
   @include content;
-  position: relative;
+
+  &.active .banner {
+    height: 325px;
+    transition: height .3s;
+  }
+
+  .banner {
+    transition: height .3s;
+
+    @media screen and (max-width: $break-mobile) {
+      background-color: black;
+      height: 0;
+      overflow-y: hidden;
+    }
+
+    @media screen and (min-width: $break-mobile) {
+      top: -1px;
+      position: relative;
+      overflow-x: visible;
+      background-color: black;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      box-sizing: border-box;
+      margin-top: 0;
+      margin-bottom: 0;
+      -webkit-margin-after: 0;
+      -webkit-padding-start: 0;
+    }
+
+    @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      width: $width-desktop + 2 * $overhang;
+      left: -$overhang;
+    }
+  }
 
   ul {
     position: relative;
     list-style: none;
-    width: $width-desktop + 2 * $overhang;
-    left: -$overhang;
-    overflow-x: visible;
-    background-color: black;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;
-    margin-top: 12px;
-    margin-bottom: 0;
-    -webkit-margin-before: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 620px;
+    -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-padding-start: 0;
   }
 
-  li:first-of-type {
-    padding-left: 200px;
-  }
-
   a {
-    font-size: 14px;
     display: block;
-    text-align: center;
     text-decoration: none;
-    float: left;
     margin: 0 2px;
-    padding: 8px 15px;
     color: white;
+
+    @media screen and (max-width: $break-mobile) {
+      border-top: 1px solid $grey;
+      font-size: 20px;
+      padding: 10px 15px;
+    }
+
+    @media screen and (min-width: $break-mobile) {
+      padding: 6px 15px;
+      text-align: center;
+      float: left;
+      font-size: 14px;
+    }
   }
 
   a:hover {
@@ -182,18 +279,42 @@ h1, h2, h3, p {
 
     h2 {
       font-weight: normal;
-      font-size: 60px;
+
+      @media screen and (max-width: $break-mobile) {
+        font-size: 40px;
+      }
+
+      @media screen and (min-width: $break-mobile) {
+        font-size: 60px;
+      }
     }
 
     .date {
-      font-size: 40px;
+      @media screen and (max-width: $break-mobile) {
+        font-size: 24px;
+      }
+
+      @media screen and (min-width: $break-mobile) {
+        font-size: 40px;
+      }
     }
   }
 
   .videos {
-    height: 425px;
     position: relative;
     background: #430922 url(/images/homepage-background.jpg) no-repeat;
+
+    @media screen and (max-width: $break-mobile) {
+      height: 640px;
+    }
+
+    @media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+      height: 550px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      height: 425px;
+    }
   }
 
   .video {
@@ -203,14 +324,23 @@ h1, h2, h3, p {
     box-sizing: border-box;
     padding: 3px;
     position: relative;
-    top: 220px;
     overflow: hidden;
-    width: 210px;
-    height: 160px;
     display: block;
     float: left;
     background-color: black;
-    margin: 0 8px;
+
+    @media screen and (max-width: $break-mobile) {
+      box-sizing: border-box;
+      width: 100%;
+      height: 160px;
+    }
+
+    @media screen and (min-width: $break-mobile) {
+      margin: 0 8px;
+      top: 220px;
+      width: 210px;
+      height: 160px;
+    }
   }
 
   .video:after {
@@ -220,19 +350,19 @@ h1, h2, h3, p {
   }
 
   .video-anniversary {
-    background: black url(/images/homepage-anniversary.png) no-repeat;
+    background: black url(/images/homepage-anniversary.png) no-repeat center 100%;
   }
 
   .video-seattle {
-    background: black url(/images/homepage-seattle.png) no-repeat;
+    background: black url(/images/homepage-seattle.png) no-repeat center 100%;
   }
 
   .video-los-angeles {
-    background: black url(/images/homepage-los-angeles.png) no-repeat;
+    background: black url(/images/homepage-los-angeles.png) no-repeat center 100%;
   }
 
   .video-fashion-show {
-    background: black url(/images/homepage-fashion-show.png) no-repeat;
+    background: black url(/images/homepage-fashion-show.png) no-repeat center 100%;
   }
 }
 
@@ -267,9 +397,18 @@ h1, h2, h3, p {
   p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-    line-height: 20px;
     color: $grey;
     margin-bottom: 25px;
+
+    @media screen and (max-width: $break-mobile) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: $break-mobile) {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   thead {
@@ -315,13 +454,22 @@ h1, h2, h3, p {
     color: white;
     text-decoration: none;
     text-align: center;
-    padding: 5px 0;
-    border-radius: 4px;
-    width: 220px;
-    font-size: 20px;
+    border-radius: 5px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (max-width: $break-mobile) {
+      font-size: 30px;
+      padding: 15px 0;
+      width: 90%;
+    }
+
+    @media screen and (min-width: $break-mobile) {
+      padding: 5px 0;
+      width: 220px;
+      font-size: 20px;
+    }
   }
 }
 
@@ -329,25 +477,48 @@ h1, h2, h3, p {
 
 .beneficiary {
   float: left;
-  height: 150px;
   width: 96px;
   margin-right: 15px;
+
+  @media screen and (max-width: $break-mobile) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: $break-mobile) {
+    height: 150px;
+  }
 }
 
 .beneficiary-bcef {
   background: url(/images/beneficiary/bceflogo.png) no-repeat;
+
+  @media screen and (max-width: $break-mobile) {
+    height: 120px;
+  }
 }
 
 .beneficiary-breastcancerfund {
   background: url(/images/beneficiary/breast-cancer-fund.png) no-repeat;
+
+  @media screen and (max-width: $break-mobile) {
+    height: 69px;
+  }
 }
 
 .beneficiary-shanti {
   background: url(/images/beneficiary/Margot_Murphy_BCP_logo.png) no-repeat;
+
+  @media screen and (max-width: $break-mobile) {
+    height: 71px;
+  }
 }
 
 .beneficiary-wcrc {
   background: url(/images/beneficiary/wcrclogoOver.gif) no-repeat;
+
+  @media screen and (max-width: $break-mobile) {
+    height: 32px;
+  }
 }
 
 //--------------------------------------------------------------------------------
@@ -357,6 +528,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #8b0048;
+  position: relative;
 }
 
 body, td, th {

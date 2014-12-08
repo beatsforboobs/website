@@ -1,4 +1,13 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/css/website.css"/>
 <link rel="canonical" href="{{ .Permalink }}">
-<meta name = "viewport" content = "initial-scale=1.0,user-scalable=no">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" language="JavaScript">
+  $(document).ready(function () {
+    // hamburger menu
+    $('.hamburger').on('click', function (element) {
+      $(".navigation").toggleClass("active");
+    });
+  });
+</script>
