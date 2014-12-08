@@ -8,6 +8,14 @@ This website is created using [Hugo](http://gohugo.io), the static website engin
 * [Staging Website](http://beatsforboobs-staging.s3-website-us-east-1.amazonaws.com/)
 * [Production Website](http://beatsforboobs.org)
 
+## Deploying the Site
+
+The staging site will deploy automatically.  Generally, the updated staging site should be available 2 to 3 minutes after you commit a change to github.  
+
+The production site needs to be manually deploy via the [Deployment Pipeline](https://snap-ci.com/beatsforboobs/website/branch/master).  Press the play button on the most recent deployment.
+
+* [Deployment to Production](https://snap-ci.com/beatsforboobs/website/branch/master)
+
 ## Editing the website online
 
 In most cases, you should be able to edit the website online via the github.com site.  The following are links to the most commonly editing pages.  Once you are done editing a page, a job will automatically be triggered that will deploy the website to the staging site.
