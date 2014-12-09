@@ -47,8 +47,6 @@ In 2012, together, San Francisco, Seattle and Los Angeles granted out $33,500 to
 fundraising efforts and supporters like you.
 
 Beats for Boobs continues to grow organically and exponentially, attracting compassionate and devoted individuals who
-donate boundless energy, services, and time. 
-
-We hope to see you at one of our signature events and have you joinus in
+donate boundless energy, services, and time. We hope to see you at one of our signature events and have you joinus in
 joyous celebration and earnest remembrance of those impacted by breast cancer, and in support of invaluable local breast
 cancer organizations.
