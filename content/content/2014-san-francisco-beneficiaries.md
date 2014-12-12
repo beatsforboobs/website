@@ -12,9 +12,7 @@ Proceeds from Beats for Boobs SF will be granted to our four Bay Area based bene
 
 [www.bcef.org](http://www.bcef.org)
 
-Breast Cancer Emergency Fund responds quickly and compassionately to provide emergency financial assistance to
-low-income women and men of San Francisco, San Mateo, and Santa Clara Counties who are in active treatment for breast
-cancer, in order to cover basic human needs, lessen financial burdens, and improve quality of life.
+BCEF provides quick & compassionate emergency assistance to help low-income breast cancer patients cover basic human needs, lessen financial burdens and improve quality of life.
 
 <hr/>
 <div class="beneficiary beneficiary-breastcancerfund"></div>
@@ -36,11 +34,7 @@ thrive.
 
 [www.shanti.org/pages/about-breast-cancer-program.html](http://www.shanti.org/pages/about-breast-cancer-program.html)
 
-Shanti's Margot Murphy Breast Cancer Program is one of San Francisco's most highly regarded breast cancer support
-programs offering free one-on-one Care Navigation services, in-home peer support, advocacy, translation and
-transportation assistance and health education in Spanish, Cantonese and English. For the over 450 individuals that we
-serve annually, the majority of whom are low income and underserved women, our services ensure that they can access
-medical care, complete treatment regimens and enjoy an improved quality of life with better health outcomes.
+Shanti’s Margot Murphy Breast Cancer Program augments hospital-based care and helps clients complete treatment.  We provide care navigation, emotional and practical support, and Health & Wellness activities. We serve approximately 400 clients per year in San Francisco with services in Cantonese, Mandarin, Taishanese, Spanish, Russian, and English.
 
 <hr/>
 <div class="beneficiary beneficiary-wcrc"></div>
