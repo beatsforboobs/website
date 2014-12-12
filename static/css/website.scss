@@ -1,6 +1,7 @@
 $pink: #f7287a;
 $pink-dark: #c00172;
 $pink-link: #bd37ba;
+$pink-bg: #f3c7dd;
 $grey: #6f767d;
 $grey-light: #f9f9f9;
 
@@ -62,7 +63,10 @@ h1, h2, h3, p {
   @include content;
 
   padding-bottom: 5px;
-  border-bottom: 1px solid white;
+
+  @media screen and (max-width: $break-mobile) {
+    border-bottom: 1px solid white;
+  }
 
   .hamburger, .organization, .mission, .social {
     float: left;
@@ -106,7 +110,6 @@ h1, h2, h3, p {
       width: $width-desktop/3;
       text-align: center;
     }
-
 
     h1 {
       font-weight: normal;
@@ -182,7 +185,6 @@ h1, h2, h3, p {
     }
 
     @media screen and (min-width: $break-mobile) {
-      top: -1px;
       position: relative;
       overflow-x: visible;
       background-color: black;
@@ -263,8 +265,30 @@ h1, h2, h3, p {
 .homepage {
   @include content;
   background-color: white;
-  padding: 24px;
+  padding: 18px 24px;
   box-sizing: border-box;
+
+  .ticket-button {
+    padding: 12px 0;
+    background-color: $pink-dark;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $break-mobile) {
+      width: 338px;
+    }
+
+    @media screen and (min-width: $break-mobile) {
+      width: 300px;
+    }
+  }
 
   .message, .hero {
     text-align: center;
@@ -272,18 +296,36 @@ h1, h2, h3, p {
 
   .message {
     font-weight: bold;
+    padding-bottom: 20px;
   }
 
   .hero {
-    margin-top: 16px;
     box-sizing: border-box;
     border: 2px solid black;
   }
 
-  .hero .message {
-    height: 179px;
+  .text {
     color: $pink;
-    background: url(/images/homepage-hero.png) center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin: 20px 0;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .hero .message {
+    background: $pink-bg; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f3c7dd 1%, #f3c7dd 1%, #f2e3ed 49%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f3c7dd), color-stop(1%,#f3c7dd), color-stop(49%,#f2e3ed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f3c7dd 1%,#f3c7dd 1%,#f2e3ed 49%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f3c7dd 1%,#f3c7dd 1%,#f2e3ed 49%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f3c7dd 1%,#f3c7dd 1%,#f2e3ed 49%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f3c7dd 1%,#f3c7dd 1%,#f2e3ed 49%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c7dd', endColorstr='#f2e3ed',GradientType=0 ); /* IE6-9 */
+
+    color: $pink;
 
     h1 {
       padding-top: 15px;

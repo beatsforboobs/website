@@ -5,6 +5,7 @@
 /.idea
 /.sass-cache
 /*.env
+/hugo
 
 # ignore generated files
 /public
