@@ -5,9 +5,9 @@ This website is created using [Hugo](http://gohugo.io), the static website engin
 
 ## Links
 
-* [Staging Website](http://beatsforboobs-staging.s3-website-us-east-1.amazonaws.com/)
-* [Live S3 Site](http://beatsforboobs-production.s3-website-us-east-1.amazonaws.com)
-* [Production Website](http://beatsforboobs.org)
+* [Staging Site e.g. ...amazonaws.com](http://beatsforboobs-staging.s3-website-us-east-1.amazonaws.com/)
+* [Production Site (raw) e.g. ...amazonaws.com](http://beatsforboobs-production.s3-website-us-east-1.amazonaws.com)
+* [Production Site (cdn) e.g. beatsforboobs.org](http://beatsforboobs.org)
 
 ## Deploying the Site
 
@@ -18,6 +18,8 @@ The production site needs to be manually deploy via the [Deployment Pipeline](ht
 * [Deployment Pipeline](https://snap-ci.com/beatsforboobs/website/branch/master) - Use this to deploy the live website, http://beatsforboobs.org
 
 ## Editing the website online
+
+[Screenshot instructions for editing the website [START HERE]](https://github.com/beatsforboobs/website/blob/master/docs/UpdatingContent.md)
 
 In most cases, you should be able to edit the website online via the github.com site.  The following are links to the most commonly editing pages.  Once you are done editing a page, a job will automatically be triggered that will deploy the website to the staging site.
 
