@@ -42,7 +42,7 @@ Follows the same flow as normal edits otherwise.
 
 ![Click edit](https://s3.amazonaws.com/beatsforboobs-production/docs/4-edit-in-memory-of.png)
 
-## 5. To deploy the app, visit [beatsforboobs snap-ci.com site) and click deploy.
+## 5. To deploy the app, visit [beatsforboobs snap-ci.com site](https://snap-ci.com/beatsforboobs/website/branch/master) and click deploy.
 
 ![Deploy to production](https://s3.amazonaws.com/beatsforboobs-production/docs/5-deploying.png)
 
