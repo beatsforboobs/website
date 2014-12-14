@@ -18,7 +18,7 @@ The following screenshots describe how to edit content.  Conceptually, the steps
 4. Make your changes
 5. Click save, which they call ```Commit Changes```
 6. Verify your changes on the staging site (generally takes about 60 seconds to deploy)
-7. Go to snap-ci.com and login with your github.com account 
+7. [Go to snap-ci.com](https://snap-ci.com/beatsforboobs/website/branch/master) and login with your github.com account 
 8. Select the beatsforboobs website project 
 9. Click the deploy button
 
