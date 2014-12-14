@@ -28,7 +28,7 @@ In most cases, you should be able to edit the website online via the github.com 
 	* [In Memory Of](https://github.com/beatsforboobs/website/blob/master/data/in-memory-of.txt)
 * [Contact](https://github.com/beatsforboobs/website/blob/master/content/contact.md)
 * [Make a Donation](https://github.com/beatsforboobs/website/blob/master/content/content/make-donation.md)
-* [Beneficiaries](https://github.com/beatsforboobs/website/blob/master/content/content/2014-san-francisco-beneficiaries.md)
+* [Beneficiaries](https://github.com/beatsforboobs/website/blob/master/content/content/2015-san-francisco-beneficiaries.md)
 
 ## Editing the website locally
 
