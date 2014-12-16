@@ -1,4 +1,5 @@
 h1, h2, h3, p {
+  font-family: Nunito, arial, Helvetica, sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   -webkit-margin-before: 0;
@@ -113,7 +114,7 @@ h1, h2, h3, p {
     margin-left: auto;
     margin-right: auto; } }
 .navigation.active .banner {
-  height: 325px;
+  height: 275px;
   transition: height .3s; }
 .navigation .banner {
   transition: height .3s; }
@@ -146,10 +147,12 @@ h1, h2, h3, p {
   list-style: none;
   margin-left: auto;
   margin-right: auto;
-  width: 620px;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-padding-start: 0; }
+  @media screen and (min-width: 960px) {
+    .navigation ul {
+      width: 620px; } }
 .navigation a {
   display: block;
   text-decoration: none;
@@ -182,9 +185,148 @@ h1, h2, h3, p {
   display: block;
   z-index: 100; }
 
+@media screen and (max-width: 600px) {
+  .homepage {
+    width: 100%; } }
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  .homepage {
+    width: 100%; } }
+@media screen and (min-width: 960px) {
+  .homepage {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto; } }
+.homepage .hero {
+  background: url(/images/backgrounds/grill.jpg);
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  box-sizing: border-box; }
+  .homepage .hero .girl {
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (max-width: 960px) {
+      .homepage .hero .girl {
+        background: url(/images/backgrounds/girl-small.png) no-repeat top center;
+        width: 350px;
+        height: 141px; } }
+    @media screen and (min-width: 960px) {
+      .homepage .hero .girl {
+        background: url(/images/backgrounds/girl-big.png) no-repeat top center;
+        width: 620px;
+        height: 249px; } }
+.homepage .message {
+  background: url(/images/backgrounds/pink-burst.jpg) center top no-repeat;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  box-sizing: border-box; }
+  .homepage .message h1, .homepage .message h2, .homepage .message h3, .homepage .message h4, .homepage .message p {
+    margin: 0;
+    padding: 0;
+    color: white; }
+  @media screen and (max-width: 960px) {
+    .homepage .message h1 {
+      background: url(/images/homepage-title-small.png) no-repeat;
+      height: 43px;
+      width: 340px;
+      margin: 10px auto 25px; } }
+  @media screen and (min-width: 960px) {
+    .homepage .message h1 {
+      background: url(/images/homepage-title.png) no-repeat;
+      height: 85px;
+      width: 678px;
+      margin: 10px auto 25px; } }
+  .homepage .message h2 {
+    font-weight: 300;
+    letter-spacing: -2px;
+    color: #ed2e7c;
+    text-transform: uppercase; }
+    @media screen and (max-width: 960px) {
+      .homepage .message h2 {
+        font-size: 40px;
+        padding-top: 15px; } }
+    @media screen and (min-width: 960px) {
+      .homepage .message h2 {
+        font-size: 50px; } }
+  .homepage .message h2:before, .homepage .message h2:after {
+    position: relative;
+    top: -4px;
+    font-weight: 400;
+    content: '::';
+    margin: 0 5px; }
+  .homepage .message h3 {
+    margin: 20px auto 0; }
+    @media screen and (max-width: 960px) {
+      .homepage .message h3 {
+        background: url(/images/homepage-subtitle.png) no-repeat top center;
+        background-size: 60%;
+        width: 245px;
+        height: 80px; } }
+    @media screen and (min-width: 960px) {
+      .homepage .message h3 {
+        background: url(/images/homepage-subtitle.png) no-repeat;
+        width: 245px;
+        height: 128px; } }
+  .homepage .message p {
+    font-weight: 300;
+    text-transform: uppercase; }
+    @media screen and (max-width: 960px) {
+      .homepage .message p {
+        font-size: 15px;
+        line-height: 1.4em; } }
+    @media screen and (min-width: 960px) {
+      .homepage .message p {
+        font-size: 20px;
+        line-height: 1.1em; } }
+.homepage .mission {
+  background: url(/images/backgrounds/grill-dark.jpg);
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  box-sizing: border-box; }
+  .homepage .mission .elements {
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (max-width: 960px) {
+      .homepage .mission .elements {
+        width: 364px; } }
+    @media screen and (min-width: 960px) {
+      .homepage .mission .elements {
+        width: 534px; } }
+    .homepage .mission .elements > div {
+      float: left; }
+    .homepage .mission .elements .burst-left, .homepage .mission .elements .burst-right {
+      box-sizing: border-box;
+      width: 21px;
+      height: 39px;
+      position: relative;
+      margin: 0 8px; }
+      @media screen and (max-width: 960px) {
+        .homepage .mission .elements .burst-left, .homepage .mission .elements .burst-right {
+          top: 18px; } }
+      @media screen and (min-width: 960px) {
+        .homepage .mission .elements .burst-left, .homepage .mission .elements .burst-right {
+          top: 8px; } }
+    .homepage .mission .elements .burst-left {
+      background: url(/images/backgrounds/burst-left.png) no-repeat; }
+    .homepage .mission .elements .burst-right {
+      background: url(/images/backgrounds/burst-right.png) no-repeat; }
+    .homepage .mission .elements p {
+      box-sizing: border-box;
+      color: white;
+      text-align: center;
+      padding: 12px 0; }
+      @media screen and (max-width: 960px) {
+        .homepage .mission .elements p {
+          width: 290px; } }
+      @media screen and (min-width: 960px) {
+        .homepage .mission .elements p {
+          width: 460px; } }
+
 .homepage {
   background-color: white;
-  padding: 18px 24px;
   box-sizing: border-box; }
   @media screen and (max-width: 600px) {
     .homepage {
@@ -197,18 +339,21 @@ h1, h2, h3, p {
       width: 960px;
       margin-left: auto;
       margin-right: auto; } }
+  @media screen and (min-width: 960px) {
+    .homepage {
+      padding: 18px 24px; } }
   .homepage .ticket-button {
-    padding: 12px 0;
-    background-color: #c00172;
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
+    background-color: #6d1c54;
+    border-radius: 8px;
     color: white;
-    border-radius: 5px;
     display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto; }
+    font-family: Nunito, arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px auto;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none; }
     @media screen and (max-width: 600px) {
       .homepage .ticket-button {
         width: 338px; } }
@@ -247,7 +392,7 @@ h1, h2, h3, p {
     /* IE10+ */
     background: linear-gradient(to bottom, #f3c7dd 1%, #f3c7dd 1%, #f2e3ed 49%);
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c7dd', endColorstr='#f2e3ed',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3c7dd', endColorstr='#f2e3ed', GradientType=0);
     /* IE6-9 */
     color: #f7287a; }
     .homepage .hero .message h1 {
@@ -468,8 +613,14 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #8b0048;
   position: relative; }
+
+@media screen and (min-width: 960px) {
+  body {
+    background: url(/images/backgrounds/grill-dark.jpg); } }
+@media screen and (max-width: 960px) {
+  body {
+    background-color: black; } }
 
 body, td, th {
   font-family: Arial, Helvetica, sans-serif;
