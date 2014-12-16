@@ -222,6 +222,8 @@ h1, h2, h3, p {
   border-right: 2px solid black;
   border-left: 2px solid black;
   box-sizing: border-box; }
+  .homepage .message a {
+    color: white; }
   .homepage .message h1, .homepage .message h2, .homepage .message h3, .homepage .message h4, .homepage .message p {
     margin: 0;
     padding: 0;
