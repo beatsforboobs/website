@@ -319,7 +319,7 @@ h1, h2, h3, p {
       box-sizing: border-box;
       color: white;
       text-align: center;
-      padding: 12px 0; }
+      padding: 4px 0; }
       @media screen and (max-width: 960px) {
         .homepage .mission .elements p {
           width: 290px; } }
