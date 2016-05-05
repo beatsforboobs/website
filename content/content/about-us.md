@@ -7,8 +7,6 @@ Beats for Boobs (b::b) is a collaborative celebration of art, fashion, food, mus
 raise awareness and funds for local breast cancer services organizations. We are a volunteer-led event that maintains
 low-overhead in order to maximize impact in our community.
 
-Beats for Boobs is a project of Breast Cancer Emergency Fund, a registered non-profit organization.
-
 ## History
 
 Juliana Cochnar and Radhika Ragsdale met in San Francisco in 2003 and were inspired to make an impact for people
